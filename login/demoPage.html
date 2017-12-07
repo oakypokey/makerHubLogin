@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js One Page Scroll Sites</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+
+	<style>
+
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 20px 0 0 0;
+		}
+		#section2 img{
+			margin: 20px 0 0 52px;
+		}
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		<h1>Welcome to the MakerHub</h1>
+		<input type="hidden" name="id" value="1" />
+		<p>Swipe to sign in!</p>
+		<img style="width: 300px; height:300px;"src="imgs/swipe.png" alt="swipe" />
+	</div>
+
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1>Looking you up...</h1>
+			<img src="imgs/loading.gif" alt="loading" />
+		</div>
+	</div>
+
+	<div class="section" id="section3">
+		<div id="output" class="intro">
+			<div id="project-wrapper">
+			<div id="project-container">
+				<div id="hero">
+					<div id="overlay"></div>
+					<div id="overlay2"></div>
+					<div id="hero-content">
+						<h2 id="username">User</h2>
+						<ul>
+							<li>
+								<h3>Vists</h3>
+								<p id="visitCount">118</p>
+							</li>
+							<li>
+								<h3>Skills</h3>
+								<p id="skillCount">20</p>
+							</li>
+						</ul>
+						<button>Welcome!</button>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
